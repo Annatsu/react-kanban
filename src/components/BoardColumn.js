@@ -15,6 +15,7 @@ const BoardColumn = ({
         <div className="col-sm" {...rest}>
             <div className="board-board_column">
                 <h4>{title}</h4>
+                <hr/>
                 <div>
                     {children}
                 </div>
