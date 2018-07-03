@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Board from './components/Board';
 import BoardColumn from './components/BoardColumn';
 import List from './components/List';
+import ListItem from './components/ListItem';
 
 
 // Component's stylesheet
@@ -31,7 +32,7 @@ class App extends Component {
                         >
                             <List
                                 items={[1, 2, 3]}
-                                renderItem={(n) => n} />
+                                renderItem={(n) => <ListItem>{n}</ListItem>} />
                         </BoardColumn>
                     ))
                 }
