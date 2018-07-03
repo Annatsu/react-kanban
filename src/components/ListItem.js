@@ -8,9 +8,11 @@ import './ListItem.css';
 
 
 const ListItem = ({
-    children
+    className,
+    children,
+    ...rest
 }) => (
-    <div className="board-board_list-item">
+    <div className="board-board_list-item" {...rest}>
         {children}
     </div>
 );
