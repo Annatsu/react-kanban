@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // Project Components
 import Board from './components/Board';
 import BoardColumn from './components/BoardColumn';
+import List from './components/List';
 
 
 // Component's stylesheet
@@ -28,7 +29,9 @@ class App extends Component {
                             key={id}
                             title={name}
                         >
-
+                            <List
+                                items={[1, 2, 3]}
+                                renderItem={(n) => n} />
                         </BoardColumn>
                     ))
                 }
