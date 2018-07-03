@@ -21,7 +21,22 @@ const itemStates = Object.values(ITEM_STATES);
 
 class App extends Component {
 
+
+    state = {
+        tasks: [
+            { status: ITEM_STATES.TO_DO.id, name: 'Buy groceries' },
+            { status: ITEM_STATES.TO_DO.id, name: 'Play videogames' },
+            { status: ITEM_STATES.IN_PROGRESS.id, name: 'Do some programming' },
+            { status: ITEM_STATES.DONE.id, name: 'Watch anime' },
+        ]
+    }
+
+
     render() {
+        const {
+            tasks
+        } = this.state;
+
         return (
             <Board>
                 {
@@ -31,8 +46,12 @@ class App extends Component {
                             title={name}
                         >
                             <List
-                                items={[1, 2, 3]}
-                                renderItem={(n) => <ListItem>{n}</ListItem>} />
+                                items={tasks.filter(({ status }) => status === id)}
+                                renderItem={(item) => (
+                                    <ListItem>
+                                        {item.name}
+                                    </ListItem>
+                                )} />
                         </BoardColumn>
                     ))
                 }
