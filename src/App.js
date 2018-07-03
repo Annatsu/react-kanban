@@ -7,6 +7,10 @@ import Board from './components/Board';
 import BoardColumn from './components/BoardColumn';
 
 
+// Component's stylesheet
+import './App.css';
+
+
 // Item States will serve as columns of classification
 import { ITEM_STATES } from './constants';
 const itemStates = Object.values(ITEM_STATES);
