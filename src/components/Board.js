@@ -2,10 +2,6 @@
 import React from 'react';
 
 
-// Utility Function
-import { joinStrings } from '../utils';
-
-
 const Board = ({
     className,
     children,

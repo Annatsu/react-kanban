@@ -3,9 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-// Custom Components
-
-
 const BoardColumn = ({
     title,
     children,
