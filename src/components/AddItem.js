@@ -29,11 +29,15 @@ class AddItem extends Component {
         const { itemName } = this.state;
         const { onAddItem } = this.props;
 
+
+        const newItemType = itemType || this.state.itemType;
+
+
         if (itemName !== '') {
-            onAddItem(itemName);
+            onAddItem(itemName, newItemType);
             this.setState({
                 itemName: '',
-                itemType: itemType || this.state.itemType,
+                itemType: newItemType,
             });
         }
     }

@@ -33,11 +33,11 @@ class App extends Component {
     }
 
 
-    onAddItem = (itemName) => {
+    onAddItem = (itemName, itemType) => {
         const { tasks } = this.state;
 
         this.setState({
-            tasks: [ ...tasks, { name: itemName, status: ITEM_STATES.TO_DO.id } ]
+            tasks: [ ...tasks, { name: itemName, status: itemStates.find(({ name }) => name === itemType).id } ]
         });
     }
 
