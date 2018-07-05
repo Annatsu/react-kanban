@@ -50,7 +50,8 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <AddItem
-                    onAddItem={this.onAddItem} />
+                    onAddItem={this.onAddItem}
+                    itemTypes={itemStates.map(({ name }) => name)} />
                 <Board>
                     {
                         itemStates.map(({ id, name }, i) => (
