@@ -38,24 +38,26 @@ class App extends Component {
         } = this.state;
 
         return (
-            <Board>
-                {
-                    itemStates.map(({ id, name }, i) => (
-                        <BoardColumn
-                            key={id}
-                            title={name}
-                        >
-                            <List
-                                items={tasks.filter(({ status }) => status === id)}
-                                renderItem={(item) => (
-                                    <ListItem>
-                                        {item.name}
-                                    </ListItem>
-                                )} />
-                        </BoardColumn>
-                    ))
-                }
-            </Board>
+            <div className="container-fluid">
+                <Board>
+                    {
+                        itemStates.map(({ id, name }, i) => (
+                            <BoardColumn
+                                key={id}
+                                title={name}
+                            >
+                                <List
+                                    items={tasks.filter(({ status }) => status === id)}
+                                    renderItem={(item) => (
+                                        <ListItem>
+                                            {item.name}
+                                        </ListItem>
+                                    )} />
+                            </BoardColumn>
+                        ))
+                    }
+                </Board>
+            </div>
         );
     }
 
