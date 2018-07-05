@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
+// Component's stylesheet
+import './AddItem.css';
+
+
 class AddItem extends Component {
 
     static propTypes = {
