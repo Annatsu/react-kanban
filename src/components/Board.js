@@ -7,7 +7,7 @@ const Board = ({
     children,
     ...rest
 }) => (
-        <div className="row">
+        <div className="row react-kanban-row">
             {children}
         </div>
     );

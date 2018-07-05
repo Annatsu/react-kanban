@@ -2,3 +2,8 @@ body {
     background-color: gray;
     margin: 30px;
 }
+
+.react-kanban-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
