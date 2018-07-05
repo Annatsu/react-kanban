@@ -7,6 +7,7 @@ import Board from './components/Board';
 import BoardColumn from './components/BoardColumn';
 import List from './components/List';
 import ListItem from './components/ListItem';
+import AddItem from './components/AddItem';
 
 
 // Component's stylesheet
@@ -32,6 +33,15 @@ class App extends Component {
     }
 
 
+    onAddItem = (itemName) => {
+        const { tasks } = this.state;
+
+        this.setState({
+            tasks: [ ...tasks, { name: itemName, status: ITEM_STATES.TO_DO.id } ]
+        });
+    }
+
+
     render() {
         const {
             tasks
@@ -39,6 +49,8 @@ class App extends Component {
 
         return (
             <div className="container-fluid">
+                <AddItem
+                    onAddItem={this.onAddItem} />
                 <Board>
                     {
                         itemStates.map(({ id, name }, i) => (
