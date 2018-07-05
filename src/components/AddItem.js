@@ -67,12 +67,13 @@ class AddItem extends Component {
                             </button>
                             <div className="dropdown-menu">
                                 {itemTypes.map((typeName, i) => (
-                                    <a
+                                    <span
                                         key={i}
-                                        className="dropdown-item"
+                                        className="dropdown-item board-add_item-button"
+                                        onClick={() => this.addItem(typeName)}
                                     >
                                         {typeName}
-                                    </a>
+                                    </span>
                                 ))}
                             </div>
                         </div>
