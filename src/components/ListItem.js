@@ -11,14 +11,20 @@ const ListItem = ({
     children,
     ...rest
 }) => (
-    <div className="board-board_list-item" {...rest}>
-        {children}
-    </div>
-);
+        <div className="board-board_list-item" {...rest}>
+            <div className="row">
+                <div className="col-10">
+                    {children}
+                </div>
+                <div className="col-2">
+                </div>
+            </div>
+        </div>
+    );
 
 
 ListItem.propTypes = {
-    
+
 };
 
 
